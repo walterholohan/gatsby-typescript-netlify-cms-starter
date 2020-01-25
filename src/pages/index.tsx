@@ -1,3 +1,4 @@
+import Button from "@material-ui/core/Button"
 import { Link } from "gatsby"
 import React from "react"
 
@@ -11,6 +12,9 @@ const IndexPage = () => (
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
+    <Button variant="contained" color="primary">
+      Hello World
+    </Button>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>

@@ -8,6 +8,7 @@
     "import-name": false,
     "no-boolean-literal-compare": false,
     "interface-name": false,
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": false
   }
 }
