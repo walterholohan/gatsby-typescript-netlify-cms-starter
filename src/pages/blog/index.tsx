@@ -1,7 +1,7 @@
 import React from "react"
 
 import BlogRoll from "../../components/blogRoll"
-import Layout from "../../components/Layout"
+import Layout from "../../components/layout"
 
 export default class BlogIndexPage extends React.Component {
   public render() {

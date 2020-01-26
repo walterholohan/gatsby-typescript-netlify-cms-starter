@@ -8,9 +8,9 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
-import Header from "./header"
 import Grid, { GridSpacing } from "@material-ui/core/Grid"
-import { makeStyles, createStyles } from "@material-ui/core/styles"
+import { createStyles, makeStyles } from "@material-ui/core/styles"
+import Header from "./header"
 import "./layout.css"
 
 const useStyles = makeStyles(() =>
@@ -40,11 +40,11 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Grid container className={classes.root}>
-        <Grid item xs={12}>
+      <Grid container={true} className={classes.root}>
+        <Grid item={true} xs={12}>
           <main>{children}</main>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item={true} xs={12}>
           <footer>
             © {new Date().getFullYear()}, Built with
             {` `}

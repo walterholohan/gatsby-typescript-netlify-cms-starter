@@ -2,7 +2,7 @@ import { graphql, Link } from "gatsby"
 import React from "react"
 
 import Typography from "@material-ui/core/Typography"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 
 interface Props {
   title: string

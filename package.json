@@ -63,7 +63,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "type-check": "tsc --noEmit",
     "lint": "tslint --project .",
-    "lint:fix": "tslint --project --fix ."
+    "lint:fix": "tslint --project . --fix"
   },
   "repository": {
     "type": "git",
