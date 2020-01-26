@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-typescript-netlify-starter",
+  "name": "gatsby-typescript-netlify-cms-starter",
   "private": false,
-  "description": "A starter template to quickly spin up web application",
+  "description": "A starter template to quickly spin up gatsby web application with netlify cms",
   "version": "0.1.0",
   "author": "Walter Holohan <walter.holohan@gmail.com>",
   "dependencies": {
@@ -67,7 +67,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/walterholohan/gatsby-typescript-netlify-starter"
+    "url": "https://github.com/walterholohan/gatsby-typescript-netlify-cmas-starter"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

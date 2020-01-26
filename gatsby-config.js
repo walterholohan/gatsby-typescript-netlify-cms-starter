@@ -69,7 +69,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-typescript-netlify-starter`,
+        name: `gatsby-typescript-netlify-cms-starter`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
