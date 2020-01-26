@@ -9,13 +9,24 @@ import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
 import Header from "./header"
+import Grid, { GridSpacing } from "@material-ui/core/Grid"
+import { makeStyles, createStyles } from "@material-ui/core/styles"
 import "./layout.css"
+
+const useStyles = makeStyles(() =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+  })
+)
 
 interface Props {
   children: React.ReactNode
 }
 
 const Layout = ({ children }: Props) => {
+  const classes = useStyles()
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,20 +40,18 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Grid container className={classes.root}>
+        <Grid item xs={12}>
+          <main>{children}</main>
+        </Grid>
+        <Grid item xs={12}>
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </Grid>
+      </Grid>
     </>
   )
 }
