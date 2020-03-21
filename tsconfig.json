@@ -15,6 +15,7 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true
   },
+  "files": ["images.d.ts"],
   "include": ["./src/**/*"],
   "exclude": ["node_modules", "public", ".cache"]
 }

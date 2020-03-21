@@ -3,7 +3,6 @@ import Button from "@material-ui/core/Button"
 import IconButton from "@material-ui/core/IconButton"
 import { makeStyles } from "@material-ui/core/styles"
 import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
 import MenuIcon from "@material-ui/icons/Menu"
 import React from "react"
 
@@ -37,9 +36,7 @@ const Header = ({ siteTitle }: Props) => {
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" className={classes.title}>
-          {siteTitle}
-        </Typography>
+        <h6 className={classes.title}>{siteTitle}</h6>
         <Button color="inherit">Login</Button>
       </Toolbar>
     </AppBar>

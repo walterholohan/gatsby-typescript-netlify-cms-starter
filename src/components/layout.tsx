@@ -8,10 +8,21 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
-import Grid, { GridSpacing } from "@material-ui/core/Grid"
-import { createStyles, makeStyles } from "@material-ui/core/styles"
+import Grid from "@material-ui/core/Grid"
+import {
+  createMuiTheme,
+  createStyles,
+  makeStyles,
+  MuiThemeProvider,
+} from "@material-ui/core/styles"
 import Header from "./header"
 import "./layout.css"
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: ["Fira Sans", "sans-serif"].join(","),
+  },
+})
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -38,7 +49,7 @@ const Layout = ({ children }: Props) => {
   `)
 
   return (
-    <>
+    <MuiThemeProvider theme={theme}>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Grid container={true} className={classes.root}>
         <Grid item={true} xs={12}>
@@ -52,7 +63,7 @@ const Layout = ({ children }: Props) => {
           </footer>
         </Grid>
       </Grid>
-    </>
+    </MuiThemeProvider>
   )
 }
 
