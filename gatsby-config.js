@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -66,7 +67,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-tslint`,
     `gatsby-plugin-typescript`,
     {
       resolve: "gatsby-plugin-netlify-cms",
@@ -84,6 +84,18 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-eslint",
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ["develop"],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
       },
     },
     {

@@ -20,7 +20,7 @@ const PreviewCompatibleImage = ({ imageInfo }: Props) => {
     )
   }
 
-  if (!!childImageSharp) {
+  if (childImageSharp) {
     return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
   }
 

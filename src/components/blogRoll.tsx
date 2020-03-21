@@ -1,5 +1,6 @@
 import { graphql, Link, StaticQuery } from "gatsby"
 import React from "react"
+
 import PreviewCompatibleImage from "./previewCompatibleImage"
 
 interface Props {
@@ -67,8 +68,8 @@ class BlogRoll extends React.Component<Props> {
   }
 }
 
-export default () => (
-  <StaticQuery
+const BlogRollContainer = () => {
+  ;<StaticQuery
     query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
@@ -102,4 +103,6 @@ export default () => (
     `}
     render={data => <BlogRoll data={data} />}
   />
-)
+}
+
+export default BlogRollContainer

@@ -1,5 +1,6 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
+
 import Layout from "../components/layout"
 
 interface Props {
